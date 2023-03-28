@@ -1,9 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function useUpdateLogger(value) {
+export default function useUpdateLogger(title) {
+
+const [value, setValue] = useState(title);
+
+
+
   useEffect(() => {
     console.log("value",value);
   }, [value]);
 
-  return <div>useUpdateLogger</div>;
+  return [value,setValue];
 }

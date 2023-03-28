@@ -1,9 +1,10 @@
 import useUpdateLogger from "@/components/hooks/useUpdateLogger";
-import React, { useState } from "react";
+import React from "react";
 
 export default function Index() {
-  const [value, setValue] = useState("");
-  //pass value to custom hook useUpdateLogger
+  //hook useUpdateLogger
+  const [value, setValue] = useUpdateLogger("");
+
   useUpdateLogger(value);
   return (
     <div>
